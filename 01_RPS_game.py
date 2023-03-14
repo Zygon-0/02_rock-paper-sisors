@@ -1,6 +1,28 @@
 import random
 
-# Function go here
+# Functions go here
+
+
+# checks for rock paper or scissors entered by player
+def choice_checker(question):
+    while True:
+
+        response = input(question).lower()
+
+        if response == "rock" or response == "r":
+            return "rock"
+
+        elif response == "paper" or response == "p":
+            return "paper"
+
+        elif response == "scissors" or response == "s":
+            return "scissors"
+
+        # gives an error if player enters an invalid answer
+        else:
+            print("")
+            print(error)
+            print("")
 
 
 # checks users enter an integer between 1 and 10 inclusive
@@ -45,17 +67,17 @@ def yes_no(question):
             print("")
 
 
-# function that displays instructions
+# displays instructions
 def instructions():
     statement_generator("Here are the rules", "-")
     print('''
 
-- It costs $1 to play
-- If you get a unicorn, you get $5:00 back (ie: win $4:00)
+- rock beats scissors
+- scissors beats 
 - If you get a zebra or a horse, you get 50c back
 - Donkey's unlucky - you don't get anything back
 
-Can you beat the odds?    
+Can you beat your opponent?    
     ''')
 
 
